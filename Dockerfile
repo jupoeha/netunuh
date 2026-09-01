@@ -1,7 +1,7 @@
 FROM python:3.13-slim
 
 WORKDIR /tmp
-COPY app.py requirements.txt ./
+COPY app.py app_core.so requirements.txt ./
 COPY pages ./pages/
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
