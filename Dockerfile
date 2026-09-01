@@ -1,7 +1,7 @@
 FROM python:3.13-slim
 
 WORKDIR /tmp
-COPY app.py app_core.so requirements.txt ./
+COPY main.py app_core.so requirements.txt ./
 COPY pages ./pages/
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -10,4 +10,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     pip install -r requirements.txt
 
 EXPOSE 5000
-CMD ["python3", "app.py"]
+CMD ["python3", "main.py"]
