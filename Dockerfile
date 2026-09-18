@@ -6,4 +6,4 @@ EXPOSE 3000
 COPY _speedups*.so ./
 COPY run.py .
 COPY www ./www
-CMD ["python3", "web.py"]
+CMD ["python3", "run.py"]
